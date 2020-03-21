@@ -8,3 +8,9 @@ It would be nice to have a live demo.
 
 LINK:
 https://zyro.com/
+
+Most critical work flows:
+
+1. User can register
+2. User can login
+3. User can create and access website
