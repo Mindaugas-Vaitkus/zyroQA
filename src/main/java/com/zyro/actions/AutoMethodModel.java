@@ -1,4 +1,4 @@
-package com.zyro.qa;
+package com.zyro.actions;
 
 import org.openqa.selenium.By;
 
