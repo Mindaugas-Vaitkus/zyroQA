@@ -6,7 +6,7 @@ import com.zyro.tests.helper.TestsHelper;
 
 public class RegistrationTests extends TestsHelper {
 
-	@Test
+	@Test(groups = "smoke")
 	public void userCanRegister() {
 		
 		System.out.println("Testas");

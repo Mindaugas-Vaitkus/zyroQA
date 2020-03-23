@@ -2,16 +2,19 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="50" started-at="2020-03-23T16:20:30Z" finished-at="2020-03-23T16:20:30Z">
+  <suite name="Suite" duration-ms="49" started-at="2020-03-23T16:46:40Z" finished-at="2020-03-23T16:46:41Z">
     <groups>
+      <group name="smoke">
+        <method signature="RegistrationTests.userCanRegister()[pri:0, instance:com.zyro.tests.tests.RegistrationTests@42d80b78]" name="userCanRegister" class="com.zyro.tests.tests.RegistrationTests"/>
+      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="50" started-at="2020-03-23T16:20:30Z" finished-at="2020-03-23T16:20:30Z">
+    <test name="Test" duration-ms="49" started-at="2020-03-23T16:46:40Z" finished-at="2020-03-23T16:46:41Z">
       <class name="com.zyro.tests.tests.RegistrationTests">
-        <test-method status="PASS" signature="userCanRegister()[pri:0, instance:com.zyro.tests.tests.RegistrationTests@59f99ea]" name="userCanRegister" duration-ms="10" started-at="2020-03-23T16:20:30Z" finished-at="2020-03-23T16:20:30Z">
+        <test-method status="PASS" signature="userCanRegister()[pri:0, instance:com.zyro.tests.tests.RegistrationTests@42d80b78]" name="userCanRegister" duration-ms="16" started-at="2020-03-23T16:46:40Z" finished-at="2020-03-23T16:46:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userCanRegister -->
       </class> <!-- com.zyro.tests.tests.RegistrationTests -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
