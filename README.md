@@ -17,3 +17,4 @@ Most critical work flows:
  -
 3. User can create and access website
  -
+4. User can use header links
