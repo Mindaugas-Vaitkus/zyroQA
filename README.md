@@ -11,7 +11,7 @@ https://zyro.com/
 
 Most critical work flows:
 
-1. User can register
+1. User can sign up
 	Test Case:
   		- Navigate to https://zyro.com/
   		- Click 'Join Zyro' button

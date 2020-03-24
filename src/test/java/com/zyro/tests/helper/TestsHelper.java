@@ -11,13 +11,14 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import com.zyro.actions.BrowserHandler;
 import com.zyro.data.TestData;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestsHelper {
 	
-	WebDriver driver;
+	public WebDriver driver;
 	
 	Instant testStartTime;
 	Instant testFinishTime;
@@ -35,6 +36,9 @@ public class TestsHelper {
 		
 		WebDriverManager.chromedriver().version("80.0.3987.106").setup();
 		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		
+		BrowserHandler.navigateToURL(driver, TestData.PRODUCTION_URL);
 	}
 	
 	@AfterMethod(alwaysRun = true)
@@ -61,6 +65,6 @@ public class TestsHelper {
 		
 		testFinishTime = Instant.now();
 		long testExecutionTime = Duration.between(testStartTime, testFinishTime).toMillis();
-		System.out.println(">>> '" + m.getName() + "' test ran for '" + testExecutionTime + "' ms");
+		System.out.println(">>> '" + m.getName() + "' test ran for '" + (testExecutionTime / 1000) + "' seconds");
 	}
 }

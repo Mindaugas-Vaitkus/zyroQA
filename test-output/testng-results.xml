@@ -2,51 +2,51 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="2802" started-at="2020-03-24T10:17:16Z" finished-at="2020-03-24T10:17:19Z">
+  <suite name="Suite" duration-ms="20438" started-at="2020-03-24T19:34:22Z" finished-at="2020-03-24T19:34:43Z">
     <groups>
       <group name="smoke">
-        <method signature="RegistrationTests.userCanRegister()[pri:0, instance:com.zyro.tests.tests.RegistrationTests@7cd62f43]" name="userCanRegister" class="com.zyro.tests.tests.RegistrationTests"/>
+        <method signature="SignUpTests.userCanSignUp()[pri:0, instance:com.zyro.tests.tests.SignUpTests@6093dd95]" name="userCanSignUp" class="com.zyro.tests.tests.SignUpTests"/>
       </group> <!-- smoke -->
     </groups>
-    <test name="Test" duration-ms="2802" started-at="2020-03-24T10:17:16Z" finished-at="2020-03-24T10:17:19Z">
-      <class name="com.zyro.tests.tests.RegistrationTests">
-        <test-method status="PASS" signature="setupBeforeMethod(org.testng.ITestContext, java.lang.reflect.Method)[pri:0, instance:com.zyro.tests.tests.RegistrationTests@7cd62f43]" name="setupBeforeMethod" is-config="true" duration-ms="2771" started-at="2020-03-24T10:17:16Z" finished-at="2020-03-24T10:17:19Z">
+    <test name="Test" duration-ms="20438" started-at="2020-03-24T19:34:22Z" finished-at="2020-03-24T19:34:43Z">
+      <class name="com.zyro.tests.tests.SignUpTests">
+        <test-method status="PASS" signature="setupBeforeMethod(org.testng.ITestContext, java.lang.reflect.Method)[pri:0, instance:com.zyro.tests.tests.SignUpTests@6093dd95]" name="setupBeforeMethod" is-config="true" duration-ms="6369" started-at="2020-03-24T19:34:22Z" finished-at="2020-03-24T19:34:29Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@4eaf3684]]>
+                <![CDATA[org.testng.TestRunner@423e4cbb]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[private void com.zyro.tests.tests.RegistrationTests.userCanRegister()]]>
+                <![CDATA[private void com.zyro.tests.tests.SignUpTests.userCanSignUp()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBeforeMethod -->
-        <test-method status="PASS" signature="userCanRegister()[pri:0, instance:com.zyro.tests.tests.RegistrationTests@7cd62f43]" name="userCanRegister" duration-ms="5" started-at="2020-03-24T10:17:19Z" finished-at="2020-03-24T10:17:19Z">
+        <test-method status="PASS" signature="userCanSignUp()[pri:0, instance:com.zyro.tests.tests.SignUpTests@6093dd95]" name="userCanSignUp" duration-ms="14040" started-at="2020-03-24T19:34:29Z" finished-at="2020-03-24T19:34:43Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- userCanRegister -->
-        <test-method status="PASS" signature="setupAfterMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.zyro.tests.tests.RegistrationTests@7cd62f43]" name="setupAfterMethod" is-config="true" duration-ms="3" started-at="2020-03-24T10:17:19Z" finished-at="2020-03-24T10:17:19Z">
+        </test-method> <!-- userCanSignUp -->
+        <test-method status="PASS" signature="setupAfterMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.zyro.tests.tests.SignUpTests@6093dd95]" name="setupAfterMethod" is-config="true" duration-ms="1" started-at="2020-03-24T19:34:43Z" finished-at="2020-03-24T19:34:43Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=userCanRegister status=SUCCESS method=RegistrationTests.userCanRegister()[pri:0, instance:com.zyro.tests.tests.RegistrationTests@7cd62f43] output={null}]]]>
+                <![CDATA[[TestResult name=userCanSignUp status=SUCCESS method=SignUpTests.userCanSignUp()[pri:0, instance:com.zyro.tests.tests.SignUpTests@6093dd95] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[private void com.zyro.tests.tests.RegistrationTests.userCanRegister()]]>
+                <![CDATA[private void com.zyro.tests.tests.SignUpTests.userCanSignUp()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupAfterMethod -->
-      </class> <!-- com.zyro.tests.tests.RegistrationTests -->
+      </class> <!-- com.zyro.tests.tests.SignUpTests -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

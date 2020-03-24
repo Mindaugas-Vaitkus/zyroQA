@@ -11,6 +11,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 public class AutoMethod {
+	
+	// Gets class name and method name
+	public static String getCurrentMethodAndClassName() {
+		StackTraceElement traceElement = Thread.currentThread().getStackTrace()[2];
+		
+		return String.format(
+				"Class: %s, Action: %s", 
+				traceElement.getFileName().replaceAll(".java", ""), 
+				traceElement.getMethodName()
+			);
+    }
 
 	// Finds element by and returns it
 	private static WebElement findElementBy(WebDriver driver, AutoMethodModel model) {
@@ -20,9 +31,9 @@ public class AutoMethod {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(model.getBy()));
 			element = driver.findElement(model.getBy());
 		} catch (NoSuchElementException ex) {
-			Assert.fail("\n *** Error in action <" + model.getActionCase() + ">. Element <" + model.getActionMessage() + "> should be visible! \n *** Element located by <" + model.getBy() + "> \n");
+			Assert.fail("\n >>> Error in action '" + model.getActionCase() + "'. Element '" + model.getActionMessage() + "' should be visible! \n >>> Element located by '" + model.getBy() + "' \n");
 		} catch (TimeoutException e) {
-			Assert.fail("\n *** Error in action <" + model.getActionCase() + ">. Failed to find element <" + model.getActionMessage() + ">! \n *** Element located by <" + model.getBy() + "> \n");
+			Assert.fail("\n >>> Error in action '" + model.getActionCase() + "'. Failed to find element '" + model.getActionMessage() + "'! \n >>> Element located by '" + model.getBy() + "' \n");
 		}
 		return element;
 	}
@@ -35,12 +46,12 @@ public class AutoMethod {
 			wait.until(ExpectedConditions.elementToBeClickable(model.getBy()));
 			driver.findElement(model.getBy()).click();
 		} catch (NoSuchElementException ex1) {
-			Assert.fail("\n *** Error in action located in <" + model.getActionCase() + ">. Element <" + model.getActionMessage() + "> should be clickable! \n *** Element located by <" + model.getBy() + "> \n");
+			Assert.fail("\n >>> Error in action located in '" + model.getActionCase() + "'. Element '" + model.getActionMessage() + "' should be clickable! \n >>> Element located by '" + model.getBy() + "' \n");
 		} catch (TimeoutException ex2) {
-			Assert.fail("\n *** Error in action <" +  model.getActionCase() + ">. Failed to find element <" + model.getActionMessage() + ">! \n *** Element located by <" + model.getBy() + "> \n");
+			Assert.fail("\n >>> Error in action '" +  model.getActionCase() + "'. Failed to find element '" + model.getActionMessage() + "'! \n >>> Element located by '" + model.getBy() + "' \n");
 		} catch (ElementClickInterceptedException ex3) {
 			ex3.printStackTrace();
-			Assert.fail("\n *** Error in action located in <" + model.getActionCase() + ">. Other element would receive the click! Element <" + model.getActionMessage() + "> should be clickable! \n *** Element located by <" + model.getBy() + "> \n");
+			Assert.fail("\n >>> Error in action located in '" + model.getActionCase() + "'. Other element would receive the click! Element '" + model.getActionMessage() + "' should be clickable! \n >>> Element located by '" + model.getBy() + "' \n");
 		}
 	}
 	
@@ -53,9 +64,9 @@ public class AutoMethod {
 			driver.findElement(model.getBy()).clear();
 			driver.findElement(model.getBy()).sendKeys(text);
 		} catch (NoSuchElementException ex) {
-			Assert.fail("\n *** Error in action <" + model.getActionCase() + ">. Text field <" + model.getActionMessage() + "> should be displayed! \n *** Element located by <" + model.getBy() + "> \n");
+			Assert.fail("\n >>> Error in action '" + model.getActionCase() + "'. Text field '" + model.getActionMessage() + "' should be displayed! \n >>> Element located by '" + model.getBy() + "' \n");
 		} catch (TimeoutException e) {
-			Assert.fail("\n *** Error in action <" + model.getActionCase() + ">. Failed to find element <" + model.getActionMessage() + ">! \n *** Element located by <" + model.getBy() + "> \n");
+			Assert.fail("\n >>> Error in action '" + model.getActionCase() + "'. Failed to find element '" + model.getActionMessage() + "'! \n >>> Element located by '" + model.getBy() + "' \n");
 		}
 	}
 	
@@ -66,9 +77,9 @@ public class AutoMethod {
 			WebElement menu = AutoMethod.findElementBy(driver, model);
 			actions.moveToElement(menu).perform();
 		} catch (NoSuchElementException ex) {
-			Assert.fail("\n *** Error in action <" + model.getActionCase() + ">. Element <" + model.getActionMessage() + "> should be visible! \n *** Element located by <" + model.getBy() + "> \n");
+			Assert.fail("\n >>> Error in action '" + model.getActionCase() + "'. Element '" + model.getActionMessage() + "' should be visible! \n >>> Element located by '" + model.getBy() + "' \n");
 		} catch (TimeoutException e) {
-			Assert.fail("\n *** Error in action <" + model.getActionCase() + ">. Failed to find element <" + model.getActionMessage() + ">! \n *** Element located by <" + model.getBy() + "> \n");
+			Assert.fail("\n >>> Error in action '" + model.getActionCase() + "'. Failed to find element '" + model.getActionMessage() + "'! \n >>> Element located by '" + model.getBy() + "' \n");
 		}
 	}
 	
@@ -79,9 +90,22 @@ public class AutoMethod {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(model.getBy()));
 			driver.findElement(model.getBy());
 		} catch (NoSuchElementException ex) {
-			Assert.fail("\n *** Error in action <" + model.getActionCase() + ">. Element <" + model.getActionMessage() + "> should be visible! \n *** Element located by <" + model.getBy() + "> \n");
+			Assert.fail("\n >>> Error in action '" + model.getActionCase() + "'. Element '" + model.getActionMessage() + "' should be visible! \n >>> Element located by '" + model.getBy() + "' \n");
 		} catch (TimeoutException e) {
-			Assert.fail("\n *** Error in action <" + model.getActionCase() + ">. Failed to find element <" + model.getActionMessage() + ">! \n *** Element located by <" + model.getBy() + "> \n");
+			Assert.fail("\n >>> Error in action '" + model.getActionCase() + "'. Failed to find element '" + model.getActionMessage() + "'! \n >>> Element located by '" + model.getBy() + "' \n");
 		}
+	}
+	
+	// Find all elements by specified locator and return count of found elements
+	public static int findAllElementsBy(WebDriver driver, AutoMethodModel model) {
+		int countOfElements = 0;
+		try {
+			countOfElements = driver.findElements(model.getBy()).size();
+		} catch (NoSuchElementException ex) {
+			Assert.fail("\n *** Error in action '" + model.getActionCase() + "'. Element '" + model.getActionMessage() + "' should be visible! \n *** Element located by '" + model.getBy() + "' \n");
+		} catch (TimeoutException e) {
+			Assert.fail("\n *** Error in action '" + model.getActionCase() + "'. Failed to find element '" + model.getActionMessage() + "'! \n *** Element located by '" + model.getBy() + "' \n");
+		}
+		return countOfElements;
 	}
 }

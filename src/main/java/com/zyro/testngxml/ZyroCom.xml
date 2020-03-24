@@ -8,7 +8,7 @@
     	</run>
     </groups>
     <classes>
-      <class name="com.zyro.tests.tests.RegistrationTests"/>
+      <class name="com.zyro.tests.tests.SignUpTests"/>
     </classes>
   </test>
 </suite>
