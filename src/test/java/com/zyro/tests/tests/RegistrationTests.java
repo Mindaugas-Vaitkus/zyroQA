@@ -6,10 +6,10 @@ import com.zyro.tests.helper.TestsHelper;
 
 public class RegistrationTests extends TestsHelper {
 
-	@Test(groups = "smoke")
-	public void userCanRegister() {
+	@Test(groups = { "smoke" })
+	private void userCanRegister() {
 		
-		System.out.println("Testas");
+		System.out.println("userCanRegister");
 		
 	}
 }
