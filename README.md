@@ -14,7 +14,7 @@ Most critical work flows:
 1. User can sign up
 	Test Case:
   		- Navigate to https://zyro.com/
-  		- Click 'Join Zyro' button
+		- Click 'Join Zyro' button
   		- Enter email address
   		- Click 'Continue' button
   		- Enter password
